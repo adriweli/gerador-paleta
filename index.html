@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualização da Paleta</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    canvas { margin-top: 20px; }
+    #exportFormat { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Visualização da Paleta de Cores</h2>
+  <input type="color" id="color1" value="#ff0000">
+  <input type="color" id="color2" value="#ffff00">
+  <input type="color" id="color3" value="#0000ff">
+  <button onclick="desenhar()">Gerar Paleta</button>
+  <br>
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <br>
+  <button onclick="exportarPaleta()">Exportar Paleta</button>
+  <select id="exportFormat">
+    <option value="procreate">Procreate (.swatches)</option>
+    <option value="sketchbook">Sketchbook (.skcolors)</option>
+    <option value="illustrator">Illustrator (.ase)</option>
+    <option value="photoshop">Photoshop (.aco)</option>
+  </select>
+  <script src="paleta.js"></script>
+
+</body>
+</html>
